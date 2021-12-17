@@ -1,0 +1,20 @@
+{
+  "owrt_web_digital_inputs": {
+    "description": "UCI access to LuCI app",
+    "read": {
+      "ubus": {
+        "uci": [
+          "get", "access"
+        ],
+        "owrt_digital_inputs": [ "get_state" ]
+      },
+      "uci": [ "diginsensorconf" ]
+    },
+    "write": {
+      "ubus": {
+        "uci": [ "set", "commit" ]
+      },
+      "uci": [ "diginsensorconf" ]
+    }
+  }
+}

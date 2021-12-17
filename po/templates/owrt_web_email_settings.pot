@@ -1,0 +1,82 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:6
+msgid "msg_address"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:22
+msgid "msg_authentication"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:119
+msgid "msg_close"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:95
+msgid "msg_connected"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:115
+msgid "msg_connection_status"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:3
+msgid "msg_desc"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:16
+msgid "msg_encryption"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:97
+msgid "msg_error"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:99
+msgid "msg_error_1"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:101
+msgid "msg_error_2"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:103
+msgid "msg_error_3"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:3
+msgid "msg_header"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:28
+msgid "msg_login"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:34
+msgid "msg_password"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:11
+msgid "msg_port"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:112
+msgid "msg_smtp_status"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:94
+msgid "msg_success"
+msgstr ""
+
+#: luasrc/controller/owrt_web_email_settings/index.lua:4
+msgid "msg_tab"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:75
+msgid "msg_test"
+msgstr ""
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:53
+msgid "msg_to"
+msgstr ""

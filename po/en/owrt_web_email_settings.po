@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"X-Generator: Poedit 3.0\n"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:6
+msgid "msg_address"
+msgstr "SMTP server address"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:22
+msgid "msg_authentication"
+msgstr "Authentication"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:119
+msgid "msg_close"
+msgstr "Close"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:95
+msgid "msg_connected"
+msgstr "Communication with the SMTP server has been established."
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:115
+msgid "msg_connection_status"
+msgstr "Connection Status:"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:3
+msgid "msg_desc"
+msgstr "This page configures which SMTP server to use for sending Email notifications to the device."
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:16
+msgid "msg_encryption"
+msgstr "Use encryption"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:97
+msgid "msg_error"
+msgstr "Error"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:99
+msgid "msg_error_1"
+msgstr "Failed to connect to the SMTP server."
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:101
+msgid "msg_error_2"
+msgstr "A connection to the SMTP server has been established, but the email could not be sent."
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:103
+msgid "msg_error_3"
+msgstr "Unknown error."
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:3
+msgid "msg_header"
+msgstr "SMTP server settings for Email notifications"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:28
+msgid "msg_login"
+msgstr "Login"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:34
+msgid "msg_password"
+msgstr "Password"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:11
+msgid "msg_port"
+msgstr "SMTP server port"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:112
+msgid "msg_smtp_status"
+msgstr "SMPT settings status"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:94
+msgid "msg_success"
+msgstr "Success"
+
+#: luasrc/controller/owrt_web_email_settings/index.lua:4
+msgid "msg_tab"
+msgstr "SMTP server settings"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:75
+msgid "msg_test"
+msgstr "TEST"
+
+#: luasrc/model/cbi/owrt_web_email_settings/email_settings.lua:53
+msgid "msg_to"
+msgstr "To"

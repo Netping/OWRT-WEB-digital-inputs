@@ -1,0 +1,51 @@
+.digital-inputs-section {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: none;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 0.6em 1em;
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-right: 0;
+}
+.digital-inputs-section__title {
+  flex: 1;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.digital-inputs-section__controls {
+  text-align: right;
+}
+.digital-inputs-section__add {
+  padding: 1em;
+  border-top: 1px solid #dddddd;
+}
+.digital-inputs__table {
+  width: 100%;
+}
+.digital-inputs__table tr th {
+  font-size: 1.2em;
+}
+.digital-inputs__table tr th,
+.digital-inputs__table tr td {
+  padding: 0.6em 1em;
+  vertical-align: middle;
+}
+.digital-inputs__table tr:nth-child(odd) {
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-right: 0;
+}
+.digital-inputs__table tr:last-child {
+  border-bottom: 0;
+}
+.digital-inputs__description {
+  min-width: 8em;
+  padding: 0.4em;
+  background: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
