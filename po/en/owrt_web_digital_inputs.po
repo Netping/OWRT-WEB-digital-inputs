@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: dist/view/settings.js:24
+msgid "owrt_web_add_sensor"
+msgstr "Add sensor"
+
+#: dist/view/settings.js:35
+msgid "owrt_web_description"
+msgstr "Description"
+
+#: dist/controller/owrt_web_digital_inputs.lua:4
+msgid "owrt_web_digital_inputs"
+msgstr "Digital inputs"
+
+#: dist/view/settings.js:25
+msgid "owrt_web_edit_sensor"
+msgstr "Edit sensor"
+
+#: dist/view/settings.js:75
+msgid "owrt_web_error_oid"
+msgstr "OID expected"
+
+#: dist/view/status.js:61
+msgid "owrt_web_local"
+msgstr "Local"
+
+#: dist/view/settings.js:30 dist/view/status.js:94
+msgid "owrt_web_name"
+msgstr "Name"
+
+#: dist/view/settings.js:32
+msgid "owrt_web_new"
+msgstr "New"
+
+#: dist/view/settings.js:84
+msgid "owrt_web_period"
+msgstr "Period"
+
+#: dist/view/status.js:61
+msgid "owrt_web_remote"
+msgstr "Remote"
+
+#: dist/view/settings.js:17
+msgid "owrt_web_sensors"
+msgstr "Sensors"
+
+#: dist/view/status.js:90
+msgid "owrt_web_sensors_status"
+msgstr "Sensors status"
+
+#: dist/controller/owrt_web_digital_inputs.lua:6
+msgid "owrt_web_settings"
+msgstr "Settings"
+
+#: dist/view/settings.js:54
+msgid "owrt_web_snmp_addr"
+msgstr "Address"
+
+#: dist/view/settings.js:66
+msgid "owrt_web_snmp_community"
+msgstr "Community"
+
+#: dist/view/settings.js:72
+msgid "owrt_web_snmp_oid"
+msgstr "OID"
+
+#: dist/view/settings.js:60
+msgid "owrt_web_snmp_port"
+msgstr "Port"
+
+#: dist/view/settings.js:78
+msgid "owrt_web_snmp_timeout"
+msgstr "Ttimeout"
+
+#: dist/view/status.js:96
+msgid "owrt_web_state"
+msgstr "State"
+
+#: dist/controller/owrt_web_digital_inputs.lua:5 dist/view/status.js:97
+msgid "owrt_web_status"
+msgstr "Status"
+
+#: dist/view/status.js:29
+msgid "owrt_web_status_error"
+msgstr "error"
+
+#: dist/view/status.js:27
+msgid "owrt_web_status_norm"
+msgstr "norm"
+
+#: dist/view/status.js:25
+msgid "owrt_web_status_notpolled"
+msgstr "not polled"
+
+#: dist/view/status.js:28
+msgid "owrt_web_status_timeout"
+msgstr "timeout"
+
+#: dist/view/status.js:26
+msgid "owrt_web_status_unknown"
+msgstr "status"
+
+#: dist/view/settings.js:49
+msgid "owrt_web_template"
+msgstr "Template"
+
+#: dist/view/settings.js:44
+msgid "owrt_web_toff_desc"
+msgstr "Title \"Off\""
+
+#: dist/view/settings.js:39
+msgid "owrt_web_ton_desc"
+msgstr "Title \"On\""
+
+#: dist/view/status.js:95
+msgid "owrt_web_type"
+msgstr "Type"
+
+#~ msgid "owrt_web_delete"
+#~ msgstr "Delete"
+
+#~ msgid "owrt_web_off"
+#~ msgstr "Off"
+
+#~ msgid "owrt_web_on"
+#~ msgstr "On"
+
+#~ msgid "owrt_web_sensor_local"
+#~ msgstr "Local"
+
+#~ msgid "owrt_web_sensor_smnp"
+#~ msgstr "smnp sensor"
+
+#~ msgid "owrt_web_smnp"
+#~ msgstr "SNMP"

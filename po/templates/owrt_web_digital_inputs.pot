@@ -1,0 +1,118 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: dist/view/settings.js:24
+msgid "owrt_web_add_sensor"
+msgstr ""
+
+#: dist/view/settings.js:35
+msgid "owrt_web_description"
+msgstr ""
+
+#: dist/controller/owrt_web_digital_inputs.lua:4
+msgid "owrt_web_digital_inputs"
+msgstr ""
+
+#: dist/view/settings.js:25
+msgid "owrt_web_edit_sensor"
+msgstr ""
+
+#: dist/view/settings.js:75
+msgid "owrt_web_error_oid"
+msgstr ""
+
+#: dist/view/status.js:61
+msgid "owrt_web_local"
+msgstr ""
+
+#: dist/view/settings.js:30 dist/view/status.js:94
+msgid "owrt_web_name"
+msgstr ""
+
+#: dist/view/settings.js:32
+msgid "owrt_web_new"
+msgstr ""
+
+#: dist/view/settings.js:84
+msgid "owrt_web_period"
+msgstr ""
+
+#: dist/view/status.js:61
+msgid "owrt_web_remote"
+msgstr ""
+
+#: dist/view/settings.js:17
+msgid "owrt_web_sensors"
+msgstr ""
+
+#: dist/view/status.js:90
+msgid "owrt_web_sensors_status"
+msgstr ""
+
+#: dist/controller/owrt_web_digital_inputs.lua:6
+msgid "owrt_web_settings"
+msgstr ""
+
+#: dist/view/settings.js:54
+msgid "owrt_web_snmp_addr"
+msgstr ""
+
+#: dist/view/settings.js:66
+msgid "owrt_web_snmp_community"
+msgstr ""
+
+#: dist/view/settings.js:72
+msgid "owrt_web_snmp_oid"
+msgstr ""
+
+#: dist/view/settings.js:60
+msgid "owrt_web_snmp_port"
+msgstr ""
+
+#: dist/view/settings.js:78
+msgid "owrt_web_snmp_timeout"
+msgstr ""
+
+#: dist/view/status.js:96
+msgid "owrt_web_state"
+msgstr ""
+
+#: dist/controller/owrt_web_digital_inputs.lua:5 dist/view/status.js:97
+msgid "owrt_web_status"
+msgstr ""
+
+#: dist/view/status.js:29
+msgid "owrt_web_status_error"
+msgstr ""
+
+#: dist/view/status.js:27
+msgid "owrt_web_status_norm"
+msgstr ""
+
+#: dist/view/status.js:25
+msgid "owrt_web_status_notpolled"
+msgstr ""
+
+#: dist/view/status.js:28
+msgid "owrt_web_status_timeout"
+msgstr ""
+
+#: dist/view/status.js:26
+msgid "owrt_web_status_unknown"
+msgstr ""
+
+#: dist/view/settings.js:49
+msgid "owrt_web_template"
+msgstr ""
+
+#: dist/view/settings.js:44
+msgid "owrt_web_toff_desc"
+msgstr ""
+
+#: dist/view/settings.js:39
+msgid "owrt_web_ton_desc"
+msgstr ""
+
+#: dist/view/status.js:95
+msgid "owrt_web_type"
+msgstr ""
