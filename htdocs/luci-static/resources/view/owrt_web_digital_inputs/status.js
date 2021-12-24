@@ -17,7 +17,7 @@ return L.view.extend({
 	rpcCall: rpc.declare({
 		object: 'owrt_digital_inputs',
 		method: 'get_state',
-		params: [ 'id_relay' ],
+		params: [ 'name' ],
 		expect: {}
 	}),
 	updateTable: (id, result, items, tdesc) => {
