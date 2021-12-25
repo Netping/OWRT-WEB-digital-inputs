@@ -51,8 +51,6 @@ return L.view.extend({
 			const sensorId = sensor['.name'];
 			let row = E('tr', {
 				'data-id': sensorId,
-				'data-toff_desc': sensor.toff_desc,
-				'data-ton_desc': sensor.ton_desc,
 				'class' : 'sensor'
 			}, [
 				E('td', { 'data-id': 'description' }, [
@@ -68,13 +66,14 @@ return L.view.extend({
 
 		sensors.forEach((sensor) => {
 			const id = sensor['.name'];
+			const name = sensor['name'];
 			const period = sensor['period'];
 			const tdesc = {
 				"0": sensor.toff_desc,
 				"1": sensor.ton_desc
 			}
 			poll.add(() =>
-				L.resolveDefault(this.rpcCall(id))
+				L.resolveDefault(this.rpcCall(name))
 					.then((result) => {
 						if (result === 4) {
 							poll.stop();
