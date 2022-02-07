@@ -1,11 +1,11 @@
 SECTION="NetPing modules"
 CATEGORY="Base"
-TITLE="EPIC OWRT-WEB-digital-inputs"
+TITLE="OWRT-WEB-digital-inputs"
 
 PKG_NAME="OWRT-WEB-digital-inputs"
 PKG_VERSION=0.1
 PKG_RELEASE=1
-PKG_DEPENDS=OWRT-Digital-inputs
+PKG_DEPENDS=OWRT-digital-inputs
 
 MODULE_NAME=owrt_web_digital_inputs
 MODULE_FILES_DIR=/usr/lib/lua/luci/
