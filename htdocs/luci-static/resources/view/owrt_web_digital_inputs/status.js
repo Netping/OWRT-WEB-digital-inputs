@@ -3,24 +3,12 @@
 'require uci';
 'require poll';
 'require rpc';
+'require fs';
 
-return L.view.extend({
-	uciConfig: 'diginsensorconf',
-	handleSaveApply: null,
-	handleSave: null,
-	handleReset: null,
-	load: function() {
-		return Promise.all([
-			uci.load(this.uciConfig)
-		]);
-	},
-	rpcCall: rpc.declare({
-		object: 'owrt_digital_inputs',
-		method: 'get_state',
-		params: [ 'name' ],
-		expect: {}
-	}),
-	updateTable: (id, result, items, tdesc) => {
+let sensors, reloadInterval = 5, uciConfig = 'diginsensorconf';
+
+const table = {
+	updateData: (id, result, tdesc) => {
 		const statuses = {
 			'-2': _('owrt_web_status_notpolled'),
 			'-1': _('owrt_web_status_unknown'),
@@ -28,7 +16,7 @@ return L.view.extend({
 			'1': _('owrt_web_status_timeout'),
 			'2': _('owrt_web_status_error')
 		}
-		items.forEach((item) => {
+		table.getElement().querySelectorAll('tr').forEach((item) => {
 			if (item.dataset.id === id) {
 				item.querySelector('td[data-id="state"]').replaceChildren(E('span',
 					`${tdesc[result.state]}`
@@ -40,11 +28,7 @@ return L.view.extend({
 			}
 		});
 	},
-	render: function(html) {
-		const sensors = uci.sections(this.uciConfig, 'sensor').filter((e) =>
-			(String(e['.name']).includes('prototype') || String(e['.name']).includes('globals')) === false);
-
-		let items = [];
+	buildRows: (sensors) => {
 		let rows = E([]);
 		for (const item in sensors) {
 			const sensor = sensors[item];
@@ -60,45 +44,96 @@ return L.view.extend({
 				E('td', { 'data-id': 'state' }, '&#9711'),
 				E('td', { 'data-id': 'status' }, '&#9711')
 			]);
-			items.push(row);
 			rows.appendChild(row);
 		}
+		return rows;
+	},
+	getElement: () => document.querySelector('table.sensors-table tbody'),
+	renderRows: () => table.getElement().replaceChildren(table.buildRows(sensors))
+}
 
-		sensors.forEach((sensor) => {
-			const id = sensor['.name'];
-			const name = sensor['name'];
-			const period = sensor['period'];
-			const tdesc = {
-				"0": sensor.toff_desc,
-				"1": sensor.ton_desc
-			}
-			poll.add(() =>
-				L.resolveDefault(this.rpcCall(name))
-					.then((result) => {
-						if (result === 4) {
-							poll.stop();
-							return;
-						}
-						this.updateTable(id, result, items, tdesc);
-					})
-			, period);
+const rpcGetState = rpc.declare({
+	object: 'owrt_digital_inputs',
+	method: 'get_state',
+	params: [ 'name' ],
+	expect: {}
+});
+
+let reloadCounter = 0;
+
+const pollAction = () => {
+	for (let index in sensors) {
+		const sensor = sensors[index];
+		const [ id, name, period ] = [ sensor['.name'], sensor['name'], sensor['period'] ];
+		const tdesc = {
+			"0": sensor.toff_desc,
+			"1": sensor.ton_desc
+		}
+		L.resolveDefault(rpcGetState(id))
+			.then((result) => {
+				if (typeof result !== 'object') {
+					poll.stop();
+					return;
+				}
+				table.updateData(id, result, tdesc);
+			});
+	}
+	reloadCounter++;
+	if (reloadCounter === reloadInterval) {
+		reloadCounter = 0;
+		loadConfiguration();
+	}
+}
+
+const getSensors = (json) => {
+	let sensors = [];
+	const values = json.values;
+	for (let value in values) {
+		const item = values[value];
+		if ((item['.name'].includes('prototype') || item['.name'].includes('globals')) === false) {
+			sensors.push(item);
+		}
+	}
+	return sensors;
+}
+
+const loadConfiguration = () => {
+	if (poll.active()) {
+		poll.remove(pollAction);
+	};
+	L.resolveDefault(fs.exec_direct('ubus', ['call', 'uci', 'get', "{'config':'diginsensorconf'}"], 'json'))
+		.then(function(json) {
+			sensors = getSensors(json);
+			poll.add(pollAction, 1);
+			table.renderRows();
 		});
+}
 
-		let body = E([
+return L.view.extend({
+	handleSaveApply: null,
+	handleSave: null,
+	handleReset: null,
+	load: function() {
+		return L.resolveDefault(loadConfiguration())
+	},
+	render: function(rows) {
+		const body = E([
 			E('link', { 'rel': 'stylesheet', 'href': L.resource('view/owrt_web_digital_inputs/assets/styles.css') }),
 			E('h2', _('owrt_web_sensors_status')),
 			E('div', { 'class': ''}, [
 				E('table', { 'class': 'sensors-table' }, [
-					E('tr', { 'class' : '' }, [
-						E('th', { 'class' : 'sensors-table__name' }, _('owrt_web_name')),
-						E('th', { 'class' : 'sensors-table__type' }, _('owrt_web_type')),
-						E('th', { 'class' : 'sensors-table__state' }, _('owrt_web_state')),
-						E('th', { 'class' : 'sensors-table__status' }, _('owrt_web_status'))
-					]
-				), rows ])
+					E('thead', [
+						E('tr', { 'class' : '' }, [
+							E('th', { 'class' : 'sensors-table__name' }, _('owrt_web_name')),
+							E('th', { 'class' : 'sensors-table__type' }, _('owrt_web_type')),
+							E('th', { 'class' : 'sensors-table__state' }, _('owrt_web_state')),
+							E('th', { 'class' : 'sensors-table__status' }, _('owrt_web_status'))
+						])
+					]),
+					E('tbody', [ rows ])
+				])
 			]),
 		]);
-
-	return body;
+		return body;
   }
 });
