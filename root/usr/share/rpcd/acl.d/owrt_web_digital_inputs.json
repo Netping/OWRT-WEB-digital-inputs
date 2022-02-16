@@ -8,7 +8,11 @@
         ],
         "owrt_digital_inputs": [ "get_state" ]
       },
-      "uci": [ "diginsensorconf" ]
+      "uci": [ "diginsensorconf" ],
+      "cgi-io": [ "exec" ],
+      "file": {
+        "ubus call uci get {'config':'diginsensorconf'}": [ "exec" ],
+      }
     },
     "write": {
       "ubus": {
