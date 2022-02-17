@@ -37,8 +37,11 @@ const table = {
 				'data-id': sensorId,
 				'class' : 'sensor'
 			}, [
+				E('td', { 'data-id': 'name' }, [
+					E('div', { 'class': 'sensor__name' }, sensor.name),
+				]),
 				E('td', { 'data-id': 'description' }, [
-					E('div', { 'class': 'sensor__name' }, sensor.description),
+					E('div', { 'class': 'sensor__description' }, sensor.description),
 				]),
 				E('td', {}, (sensor.snmp_addr) ? _('owrt_web_remote') : _('owrt_web_local')),
 				E('td', { 'data-id': 'state' }, '&#9711'),
@@ -125,6 +128,7 @@ return L.view.extend({
 					E('thead', [
 						E('tr', { 'class' : '' }, [
 							E('th', { 'class' : 'sensors-table__name' }, _('owrt_web_name')),
+							E('th', { 'class' : 'sensors-table__description' }, _('owrt_web_description')),
 							E('th', { 'class' : 'sensors-table__type' }, _('owrt_web_type')),
 							E('th', { 'class' : 'sensors-table__state' }, _('owrt_web_state')),
 							E('th', { 'class' : 'sensors-table__status' }, _('owrt_web_status'))
