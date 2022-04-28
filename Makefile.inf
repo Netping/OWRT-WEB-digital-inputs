@@ -4,7 +4,7 @@ TITLE="OWRT-WEB-digital-inputs"
 
 PKG_NAME="OWRT-WEB-digital-inputs"
 PKG_VERSION=0.1
-PKG_RELEASE=5
+PKG_RELEASE=6
 PKG_DEPENDS=OWRT-digital-inputs luci-base
 
 MODULE_NAME=owrt_web_digital_inputs

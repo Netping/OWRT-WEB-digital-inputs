@@ -73,7 +73,7 @@ const pollAction = () => {
 			"0": sensor.toff_desc,
 			"1": sensor.ton_desc
 		}
-		L.resolveDefault(rpcGetState(id))
+		L.resolveDefault(rpcGetState(name))
 			.then((result) => {
 				if (typeof result !== 'object') {
 					poll.stop();
