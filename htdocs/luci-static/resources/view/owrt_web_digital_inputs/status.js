@@ -69,6 +69,7 @@ const pollAction = () => {
 		const sensor = sensors[index];
 		const [ id, name, period ] = [ sensor['.name'], sensor['name'], sensor['period'] ];
 		const tdesc = {
+			"-1": _('owrt_web_status_unknown'),
 			"0": sensor.toff_desc,
 			"1": sensor.ton_desc
 		}
